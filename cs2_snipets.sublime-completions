@@ -1,0 +1,12 @@
+{
+  "scope": "source.cs2",
+  "completions": [
+    { "trigger": "bind",       "contents": "bind ${1:key} ${2:function}", "kind": "snippet", "details": "Add some action for key"},
+    { "trigger": "unbind",     "contents": "unbind ${1:button};" },
+    { "trigger": "bindtoggle", "contents": "bindtoggle ${1:button} ${2:function};" },
+    { "trigger": "alias",      "contents": "alias ${1:name} \"${2:function}\";" },
+    { "trigger": "echo",       "contents": "echo ${1:string};" },
+    { "trigger": "say",        "contents": "say ${1:string};" },
+    { "trigger": "give",       "contents": "give ${1:weapon_};" }
+  ]
+}

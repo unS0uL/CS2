@@ -1,0 +1,341 @@
+%YAML 1.2
+---
+name: CS2
+file_extensions: [cfg]
+scope: source.cs2
+version: 2
+
+variables:
+    cvar_prefix: |-
+      (?i:@panorama_|_?cl_|_?snd_|adsp_|ai_|ammo_|anim_|
+        |animated_|animevents_|animgraph_|battery_|bot_|buddha_|budget_|
+        |bug_|bugreporter_|c_|cachedvalue_|cam_|cash_|cast_|
+        |cc_|chet_|cl_|clear_|cli_|clutch_|collect_|
+        |commentary_|con_|connect_|contributionscore_|cq_|crash_|create_|
+        |CS_|csgo_|csm_|custom_|cv_|debug_|debugoverlay_|
+        |default_|demo_|dev_|disable_|display_|dlight_|dm_|
+        |dota_|dsp_|dump_|enable_|endmatch_|engine_|ent_|
+        |entity_|exec_|execute_|ff_|fish_|fog_|force_|
+        |fov_|fps_|fs_|func_|g15_|g_|game_|
+        |gameinstructor|gameinstructor_|gameui_|getpos_|gl_|global_|glow_|
+        |gotv_|healthshot_|host_|hostage_|hostname_|hud_|ik_|
+        |imgui_|inferno_|input_|install_|iv_|joy_|joystick_|
+        |key_|kickid_|labelled_|launch_|lb_|lightquery_|lobby_|
+        |log_|logaddress_|logic_|m_|map_|mapoverview_|markup_|
+        |mat_|mc_|mesh_|minimap_|mm_|mobile_|model_|
+        |molotov_|mouse_|mp_|muzzleflash_|nav_|navspace_|net_|
+        |nextmap_|noclip_|npc_|option_|panorama_|particle_|particles_|
+        |phys_|pixelvis_|plant_|play_|player0_|player_|print_|
+        |prop_|pvs_|r_|ragdoll_|rcon_|recast_|refresh_|
+        |regenerate_|remove_|repeat_|replay_|report_|reset_|respawn_|
+        |rr_|run_|save_|say_|sc_|scene_|screenmessage_|
+        |script_|server_|setang_|setpos_|shake_|shatterglass_|show_|
+        |showtriggers_|silence_|sk_|skel_|skeleton_|snd_|sound_|
+        |soundscape_|spawn_|speaker_|spec_|splitscreen_|ss_|status_|
+        |steam_|store_|subclass_|sv_|sys_|telemetry_|Test_|
+        |texture_|think_|thirdperson_|timeout_|tr_|triple_|trusted_|
+        |tv_|ui_|vconsole_|vgui_|view_|viewmodel_|violence_|
+        |vis_|vismon_|vmix_|voice_|volume_|vphys2_|vprof_|
+        |weapon_|xbox_|zoom_|
+      )
+
+    cvars: |-
+      (?i:\+lookatweapon|\+quickbuyradial|\+quickgrenaderadial|\+quickinv|\+radialradio|
+        |\+radialradio2|\+radialradio3|\-lookatweapon|\-quickbuyradial|\-quickgrenaderadial|
+        |\-quickinv|\-radialradio|\-radialradio2|\-radialradio3|_?record|alias|
+        |autobuy|autobuy|axis|benchframe|bind|binddefaults|bindss|box|
+        |buddha|buy|buymenu|buyrandom|callvote|camortho|cancelselect|changelevel|
+        |clear|clearall|clientport|closecaption|closecaption|closeonbuy|commentary|condump|
+        |connect|consoletool|crash|CreatePredictionError|crosshair|crosshair|cvarlist|cyclevar|
+        |demolist|demoui|developer|developer|differences|disconnect|drawcross|drawline|
+        |dumpparticlelist|echo|echoln|endround|english|escape|exec|execifexists|
+        |explode|explodevector|fadein|fadeout|find|findflags|firetarget|firstperson|
+        |getpos|give|givecurrentammo|god|grep|help|hideconsole|hidehud|
+        |hostfile|hostip|hostname|hostport|hurtme|impulse|incrementvar|invnext|
+        |invnextselect|invprev|invprevselect|ip|joystick|joystick|kick|kickid|
+        |kill|killvector|lastinv|listdemo|listissues|lockMoveControllerRet|lockMoveControllerRet|log|
+        |lookspring|lookstrafe|map|mapgroup|maps|menuselect|motdfile|multvar|
+        |name|name|nextdemo|nextlevel|nextmode|noclip|notarget|password|
+        |password|pause|play|playdemo|playsoundscape|pwatchent|pwatchvar|quit|
+        |radarvisdistance|radarvismaxdot|radarvismethod|radarvispow|radio|rangefinder|rate|rate|
+        |rcon|rebuy|record|reloadgame|restart|safezonex|safezonex|safezoney|
+        |safezoney|say|sdr|sensitivity|sensitivity|servercfgfile|setang|setinfo|
+        |setmodel|setpause|setpos|shake|showconsole|showtriggers|skill|skill|
+        |slot|slot|soundinfo|startdemos|status|stop|stopdemos|stopsound|
+        |stopsoundscape|suitvolume|surfaceprop|teammenu|thirdperson|timedemo|timedemoquit|timeleft|
+        |toggle|toggleconsole|unbind|unbindall|unpause|volume|volume|wait|
+        |writekeybindings|
+      )
+
+    weapon_list: |-
+      (?i:glock|hkp2000|usp_silencer|elite|p250|tec9|fiveseven|
+        |cz75a|deagle|revolver|nova|mag7|sawedoff|xm1014|m249|
+        |negev|mp5sd|p90|mp7|mac10|mp9|bizon|ump45|galilar|
+        |famas|ak47|m4a1|m4a1_silencer|ssg08|aug|sg556|awp|
+        |g3sg1|scar20|vest|vesthelm|taser|defuser|flashbang|
+        |smokegrenade|hegrenade|molotov|incgrenade|decoy|
+      )
+
+    declaration_keys: |-
+      (?i:~|ESCAPE|0|1|2|3|4|5|6|7|8|9|-|=|
+        |Backspace|F1|F2|F3|F4|F5|F6|F7|F8|F9|F10|
+        |F11|F12|Tab|Q|W|E|R|T|Y|U|I|O|P|[|]|
+        |\|CapsLock|A|S|D|F|G|H|J|K|L|semicolon|
+        |'|Enter|shift|Z|X|C|V|B|N|M|,|.|/|
+        |ctrl|alt|Space|ins|Home|pgup|DEL|END|PGDN|
+        |uparrow|leftarrow|downarrow|rightarrow|kp_divide|
+        |kp_multiply|kp_minus|kp_7|kp_8|kp_9|kp_4|kp_5|
+        |kp_6|kp_1|kp_2|kp_3|kp_0|kp_del|kp_plus|kp_enter|
+        |mouse1|mouse2|mouse3|mouse4|mouse5|mouse6|mouse7|
+        |mwheelup|mwheeldown|key|
+      )\b
+
+contexts:
+
+  main:
+    - include: declarations
+    - include: statements
+    - include: expressions
+    - include: stray-braces
+
+  declarations:
+    - include: alias-declarations
+    - include: bind-declarations
+    - include: messagee-declarations
+
+  statements:
+    - include: blocks
+    - include: punctuation-separators
+
+  expressions:
+    - include: comments
+    - include: groups
+    - include: cvars
+
+  ###[ Bind Declaration ]###############################################################
+
+  bind-declarations:
+    - match: (?=(?i:bind)\b\s*(?:\s*|\"))
+      push:
+        - include: bind-block
+        - include: bind-declaration-name
+
+  bind-declaration-name:
+    - match: (?i:bind)\b
+      scope: keyword.declaration.bind.cs2
+      set: bind-key
+    - include: comments
+
+  bind-key:
+    - meta_include_prototype: false
+    - match: (?=\s)(?:\"?)
+      set:
+        - bind-key-define
+        - group-begin
+
+  bind-key-define:
+    # - match: '([\+\-\[\]\\\`\~a-zA-Z0-9_]*)'
+    - match: ({{declaration_keys}})
+      scope: entity.name.function.alias.cs2
+      set: 
+        - group-end
+    - include: comments
+
+  bind-block:
+    - match: '(?=(?:\s.*\s)).*'
+      scope: entity.name.section.bind.block.cs2
+      set: bind-block-body
+    - include: comments
+    - include: punctuation-separators
+
+  bind-block-body:
+    - meta_scope: meta.function.cs2 meta.block.cs2
+    - include: block-body
+    - include: punctuation-separators
+
+  ###[ Alias Declaration ]###############################################################
+
+  alias-declarations:
+    - match: (?=(?i:alias)\b\s*(?:\s*|\"))
+      push:
+        - include: alias-block
+        - include: alias-declaration-name
+
+  alias-declaration-name:
+    - match: (?i:alias)\b
+      scope: keyword.declaration.alias.cs2
+      set: alias-name
+    - include: comments
+
+  alias-name:
+    - meta_include_prototype: false
+    - match: (?=\s)
+      set:
+        - alias-name-define
+        - group-begin
+
+  alias-name-define:
+    - match: '([\+\-\[\]\\\`\~a-zA-Z0-9_]*)'
+      scope: entity.name.function.alias.cs2
+      set: 
+        - group-end
+    - include: comments
+
+  alias-block:
+    - match: '(?=(?:\s.*\s)).*'
+      scope: entity.name.section.alias.block.cs2
+      set: alias-block-body
+    - include: comments
+
+  alias-block-body:
+    - meta_scope: meta.function.alias.cs2 meta.block.cs2
+    - include: block-body
+    - include: punctuation-separators
+
+  ###[ echo|say|say_team Declaration ]#######################################################
+
+  messagee-declarations:
+    - match: (?=(?i:echo|say|say_team)\b\s*(?:\s*|\"))
+      push:
+      - include: message-declaration-name
+
+  message-declaration-name:
+    - match: (?i:echo|say|say_team)\b
+      scope: support.function.string.cs2
+    - match: \s
+      set: message-define
+    - include: comments
+
+  message-define:
+    - match: '(?!;)[\w\W]'
+      scope: string.quoted.single
+    - match: '(?:\s|$|\;)'
+      scope: punctuation.section.group.end.cs2
+      pop: 1
+    - include: comments
+    - include: punctuation-separators
+
+  ###[ COMMENTS ]###############################################################
+
+  comments:
+    - match: //
+      scope: punctuation.definition.comment.cs2
+      push: comment-line-double-slash-body
+
+  comment-block-body:
+    - meta_include_prototype: false
+    - meta_scope: comment.block.cs2
+
+  comment-line-double-slash-body:
+    - meta_include_prototype: false
+    - meta_scope: comment.line.double-slash.cs2
+    - include: comment-line-body
+
+  comment-line-number-sign-body:
+    - meta_include_prototype: false
+    - meta_scope: comment.line.number-sign.cs2
+    - include: comment-line-body
+
+  comment-line-body:
+    # Consume the newline so that completions aren't shown at the end of the line
+    - match: \n
+      pop: 1
+
+  ###[ CODE BLOCKS ]############################################################
+
+  blocks:
+    - match: \"
+      scope: punctuation.section.block.begin.cs2
+      push: block-body
+
+  block-body:
+    - meta_scope: meta.block.cs2
+    - include: block-end
+    - include: declarations
+    - include: statements
+    - include: expressions
+
+  block-end:
+    - match: \"
+      scope: punctuation.section.block.end.cs2
+      pop: 1
+
+  stray-braces:
+    - match: \"
+      scope: punctuation.section.block.end.cs2
+
+###[ EXPRESSION GROUPS ]######################################################
+
+  groups:
+    - match: (\"?\s)\s*(\.\.\.)\s*(\"?\s)
+      scope: meta.group.cs2
+      captures:
+        1: punctuation.section.group.begin.cs2
+        2: constant.other.placeholder.cs2
+        3: punctuation.section.group.end.cs2
+    - match: '(\")'
+      scope: punctuation.section.group.begin.cs2
+      push: group-body
+
+  group-begin:
+    - meta_include_prototype: false
+    - match: '(?:\s\"?)'
+      scope: punctuation.section.group.begin.cs2
+      pop: 1
+
+  group-body:
+    - meta_scope: meta.group.cs2
+    - include: group-end
+
+  group-end:
+    - match: '((?:\"?|\s\"))'
+      scope: punctuation.section.group.end.cs2
+      pop: 1
+
+  stray-parens:
+    - match: \"
+      scope: punctuation.section.group.end.cs2
+
+###[ LITERALS ]###############################################################
+
+  # Trailing underscores are allowed to prevent numbers from flickering while typing
+  numbers:
+    - match: |-
+        (?x:
+          (?:
+            (?# such as 123.4 or .123)
+            (?:\b(?!_)(?:\d|_(?!_))+|\B)(\.)(?!_)(?:\d|_(?!_))+
+            |
+            (?# such as 123.)
+            \b(?!_)(?:\d|_(?!_))+(\.)
+          )(?:[eE][+-]?(?!_)(?:\d|_(?!_))+)?\b
+          |
+          (?# such as 123e-4)
+          \b(?!_)(?:\d|_(?!_))+(?:[eE][+-]?(?!_)(?:\d|_(?!_))+)\b
+        )
+      scope: meta.number.integer.decimal.php constant.numeric.value.php
+      captures:
+        1: punctuation.separator.decimal.cs2
+        2: punctuation.separator.decimal.cs2
+    - match: (?!_)(?:\d|_(?!_))+\b
+      scope: meta.number.integer.decimal.php constant.numeric.value.php
+
+###[ VARIABLES ]###############################################################
+
+  cvars:
+    - match: '(\+|\-)([a-zA-Z_-]*)(?=;|\"|\s)'
+      # scope: variable.other
+      scope: entity.name.constant
+
+    - match: '(?<=;|\"|^|\s)({{cvar_prefix}}([a-zA-Z0-9_-]*))|(\b({{cvars}})\b)(?=;|\"|\s)'
+      scope: storage.modifier
+    - include: numbers
+
+    - match: '\b{{weapon_list}}\b'
+      scope: entity.name.constant
+
+###[ OPERATORS ]##############################################################
+
+  punctuation-separators:
+    - match: ';'
+      scope: punctuation.separator.semicolons.cs2

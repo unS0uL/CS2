@@ -1,0 +1,19 @@
+ // SYNTAX TEST "Packages/User/CS2/cs2_syntax.sublime-syntax"
+
+echo "string";
+echo string;
+
+alias mute "mute_on"
+alias mute mute_on
+
+alias mute_on "echo MUTE SOUND;alias mute mute_off;volume 0;echo |-----MUTE-SOUND-----0.0;|-----MUTE-SOUND-----0.0"
+alias mute_off "alias mute mute_on;volup;stopsound;voldown"
+
+bind key
+bind key "function"
+bind "key" "function"
+bind "key" function
+
+volume "0.2";
+weapon_m4a1
+buy m4a1
