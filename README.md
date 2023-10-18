@@ -51,5 +51,7 @@ Open *.cfg files and enjoy
 
 ## Thanks
 Big thanks Sublime text developer team for the best editor and examples for developing this packet!
+
 Thanks (https://developer.valvesoftware.com/) and (https://cstrike2.oof.lv/) for the cvar list.
+
 Thanks (https://github.com/kvishno/CSGO-Syntax-Sublime-Text/tree/master) and (https://github.com/gustavnikolaj/sublimetext2-csgo/tree/master) for an idea for developing that package.
