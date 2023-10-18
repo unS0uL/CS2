@@ -1,4 +1,4 @@
-# Counter-Strike2 Sublime text highlights, autocomplete, and snippets
+# Counter-Strike 2 Sublime text highlights, autocomplete, and snippets
 
 ## Requirements
 Sublime Text 4
