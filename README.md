@@ -18,14 +18,14 @@ Download the package and copy ```CS2``` folder from zip to:
 ```
 OR
 ```bash
-$ git clone https://github.com/sublimehq/Packages.git
+$ git clone https://github.com/unS0uL/CS2.git CS2
 $ ln -s `pwd`/CS2 ~/Library/Application\ Support/Sublime\ Text\ 3/Packages/
 ```
 
 ### Linux
 
 ```bash
-$ git clone https://github.com/sublimehq/Packages.git
+$ git clone https://github.com/unS0uL/CS2.git CS2
 $ ln -s `pwd`/CS2 ~/.config/sublime-text-3/Packages/
 ```
 
@@ -41,7 +41,7 @@ Download the package and copy ```CS2``` folder from zip to:
 OR
 ```powershell
 # Using PowerShell
-PS> git clone https://github.com/sublimehq/Packages.git
+PS> git clone https://github.com/unS0uL/CS2.git CS2
 PS> cmd /c mklink /J "$env:APPDATA/Sublime Text 3/Packages/CS2" (convert-path ./CS2)
 ```
 
